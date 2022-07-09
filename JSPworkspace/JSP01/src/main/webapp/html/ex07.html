@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>img 태그</h2>
+	
+	<!-- 
+		절대경로 : /를 붙이고 ContextPath(프로젝트명)를 표히해야 한다.
+		루트는 webapp
+	 -->
+	 
+	 <img src="/JSP01/img/puang.jpg" alt="푸앙이" width="400" height="400">
+	 
+	 <!-- 
+		상대경로 : 현재 내 위치(ex07.html)부터 찾아간다 ->webapp->img
+		.. : 상위경로로 이동
+	 -->
+	 
+	 <img src="../img/puang.jpg" alt="푸앙이" width="400" height="400">
+	 <br>
+	 
+	 <img src="/JSP01/img/puang.jpg" alt="puang">
+
+</body>
+</html>
