@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+		자바스크립트 소스코드가 짧을 경우 웹문서에서
+		자바스크립트를 실행할 위치에 바로 코드를 작성할 수 있다.
+		웹 문서에서 <script>와 </script> 태그사이에
+		실행할 자바스크립트 소스를 작성한다.
+		웹 문서안의 어디든 위치할 수 있고
+		삽입된 위치 그 자리에서 바로 스크립트가 실행된다.
+	 -->
+	 
+	 <script>
+	 
+	 	alert('Hello JavaScript!!');
+	 	//alert함수는 사용자에게 중요한 내용이나
+	 	//경고창을 띄어줄때 주로 사용하는 함수이다.
+	 	//여러가지 창 중에서 가장 많이 쓰이는 기본적인 팝업창이다.
+	 	
+	 </script>
+	 
+	 
+	 <script>
+	   var result=confirm('자바스크립트 시작할까요?');
+	   if(result){
+		   alert('네 시작합니다.');
+	   }else{
+		   alert('다음 기회에...');
+	   }
+	   //confirm 함수는 사용자에게 true/false 값을
+	   //리턴받을 수 있는 팝업창을 띄워주는 함수이다.
+	   //사용자에게 선택에 따라 true/false값을 받아서 로직처리를 할 수 있다.
+	   //자바스크립트는 타입을 명시할 필요가 없다.
+	 </script>
+	 
+	 <script>
+	 	var name=prompt('당신의 이름은?');
+	 	document.write('<h1>반갑습니다.'+name+'님</h1>');
+	 	//prompt 함수는 간단한 입력을 받을 수 있는 함수이다.
+	 	//document 객체는 웹페이지 자체를 의미하는 객체
+	 	//웹페이지에 있는 HTML에 접근하고자 할 때 document 객체로 접근할 수 있다.
+	 	
+	 </script>
+
+</body>
+</html>

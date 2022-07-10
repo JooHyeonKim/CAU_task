@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>유효성검사</title>
+</head>
+<body>
+
+	<script>
+		
+		function joinCheck(){
+			var id = document.join.id.value;
+			var pw = document.join.pw.value;
+			var pwcheck = document.join.pwCheck.value;
+			var name = document.join.name.value;
+			
+			if(id==null||id==""){
+				alert('아이디는 필수사항 입니다.');
+				document.join.id.focus();
+				return;
+			}
+			
+			if(pw==null||pw==""){
+				alert('비밀번호는 필수사항 입니다.');
+				document.join.pw.focus();
+				return;
+			}
+			
+			if(pw != pwcheck){
+				alert('비밀번호가 일치하지 않습니다.');
+				document.join.pw.focus();
+				return;
+			}
+			
+			if(name==null||name==""){
+				alert('이름은 필수사항 입니다.');
+				document.join.name.focus();
+				return;
+			}
+			
+			document.join.submit();//submit(): 입력받은 정보를 서버로 전송
+			
+		}
+	
+	</script>
+
+	<form name="join">
+	
+		아이디 : <input type="text" name="id" size="10"><br>
+		비밀번호 : <input type="password" name="pw" size="10"><br>
+		비밀번호 확인 : <input type="password" name="pwCheck" size="10"><br>
+		이름 : <input type="text" name="name" size="10"><br>
+		나이 : <input type="text" name="age" size="10"><br>
+		전화번호 : <input type="text" name="tel" size="15"><br>
+		
+		<input type="button" onclick="joinCheck()" value="회원가입">
+	
+	</form>
+
+</body>
+</html>
