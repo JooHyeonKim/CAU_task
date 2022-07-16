@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터를 서버쪽으로 넘겨보기</title>
+</head>
+<body>
+	<h2>get방식</h2>
+	
+	<form action="http://localhost:8090/JSP02/Servlet02" method="get">
+	
+		이름 : <input type="text" name="name" size="10"><br>
+		나이 : <input type="text" name="age" size="10"><br>
+		<!-- 이름과 나이를 작성해서 서버로 전송. -->
+		<!--  홍길동을 입력하면 name 속성에 담겨서 전성됨. String name="홍길동"
+		getParameter("name") 으로 데이터를 얻을 수 있다.
+		나이는 request.getparameter("age");로 얻을 수 있다.
+		getparameter의 반환값은 String이기 때문에  String age="23"
+		request 객체에 담겨져온다. 이 담겨온 데이터는 getparameter로 얻을 수 있다.
+		get방식은 url에 데이터를 저장해서 보낸다. http://localhost:8090/JSP02/Servlet02?name=%ED%99%8D%EA%B8%B8%EB%8F%99&age=23
+		url 값으로 정보가 전송되어 보안에 약하다.
+		-->
+		
+	<!-- "get" -> doGet 매소드 실행 /url로 요청이 들어가면 get방식-->
+	<!-- "post" -> doPost 매소드 실행 -->
+	
+		<input type="submit" value="GET">
+	
+	</form>
+	
+	<h2>post 방식</h2>
+	<!-- url에 데이터가 노출되지 않아서 기본 보안은 되어있다. -->
+	
+	<form action="Servlet02" method="post"><!-- 현재 위치가 같을때 -->
+		이름 : <input type="text" name="name" size="10"><br>
+		나이 : <input type="text" name="age" size="10"><br>
+		
+		<input type="submit" value="POST">
+		
+		
+		
+	</form>
+	
+</body>
+</html>

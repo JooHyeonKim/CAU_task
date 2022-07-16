@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>JSP01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  	
+  	
+  	<servlet>
+  		<!-- 임의의 이름을 만들어준다. -->
+		<servlet-name>myServlet</servlet-name>
+		
+		<!-- 등록할 클래스 파일명을 패키지명을 포함하여 정확하게 입력 -->
+		<servlet-class>com.java.servlet.Servlet01</servlet-class>
+		<!--  com.java.servlet.Servlet01 클래스를 myServlet라는 이름으로 등록하겠다-->
+	
+	</servlet><!-- servlet 태그 등록 끝 -->
+	
+	<servlet-mapping>
+	
+		<servlet-name>myServlet</servlet-name>
+		
+		<url-pattern>/HS</url-pattern>
+		<!-- 
+			url 패턴은 /로 시작해야 한다.
+		 -->
+		
+	</servlet-mapping>
+	
+	<!-- 여기서부터 초기화 파라미터 입니다. -->
+	<!-- 초기화 파라미터는 servlet태그안에 위치해야 한다. -->
+	
+	<servlet>
+		<servlet-name>initParameter</servlet-name>
+		
+		<servlet-class>com.java.servlet.Servlet06</servlet-class>
+		
+		<init-param>
+			<param-name>id</param-name>
+			<param-value>kim</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>pw</param-name>
+			<param-value>123456</param-value>
+		</init-param>
+	
+	</servlet>
+	
+	<servlet-mapping>
+	
+		<servlet-name>initParameter</servlet-name>
+		
+		<url-pattern>/initParam</url-pattern>
+
+	</servlet-mapping>
+	
+	
+	
+	
+	<!-- 여러 서블릿에서 공유해서 쓰는 context-param 데이터 -->
+	<context-param>
+	
+		<param-name>name</param-name>
+		<param-value>홍길동</param-value>
+		
+	</context-param>
+	
+	
+	<context-param>
+	
+		<param-name>age</param-name>
+		<param-value>20</param-value>
+		
+	</context-param>
+	
+</web-app> 
+
