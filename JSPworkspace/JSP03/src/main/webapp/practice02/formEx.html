@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+		form 태그를 사용해서 이를 나이 전화번호 주민번호 취미(checkbox)
+		사는지역(select)을 입력받아 requestEx.jsp로 전송하기
+	 -->
+	 
+	 <form action="requestEx.jsp">
+	 
+		 이름 : <input type="text" name="name" size="10"><br>
+		 나이 : <input type="text" name="age" size="10"><br>
+		 전화번호 : <input type="text" name="tel" size="20"><br>
+		 주민번호 : <input type="text" name="ssn" size="20"><br>
+		 
+		 취미 : <input type="checkbox" name="hobby" value="산책">산책<br>
+		 <input type="checkbox" name="hobby" value="노래">노래<br>
+		 <input type="checkbox" name="hobby" value="춤">춤<br>
+		 <input type="checkbox" name="hobby" value="낚시">낚시<br>
+	 
+		 사는지역 : <select name="area">
+		 	<option value="서울">서울</option>
+		 	<option value="부산">부산</option>
+		 	<option value="전주">전주</option>
+		 	<option value="양재">양재</option>
+		 </select>
+		 
+		 <input type="submit" value="입력">
+		 
+	 </form>
+	 
+
+</body>
+</html>
