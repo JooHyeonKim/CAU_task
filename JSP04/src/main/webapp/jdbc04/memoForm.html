@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	h2, form {
+		text-align: center;
+		margin: 0 auto;
+	} 
+</style>
+
+</head>
+<body>
+	
+	<!-- 
+		form 태그로 메모를 입력하는 폼 만들기
+		(닉네임, 메모작성글) 입력받기
+		memoCheck.jsp로 전송하기 
+	 -->
+	
+	<h2>나의 메모장</h2>
+	<br>
+	<form action="memoCheck.jsp" method="post">
+		
+		닉네임 <br> <input type="text" name="nickName" size="10"><br>
+		<br>
+		메모작성 <br>
+		<textarea name="contents" rows="5" cols="20"></textarea>
+		<br>
+		
+		<input type="submit" value="메모등록"> 
+		
+	</form>
+	
+</body>
+</html>
